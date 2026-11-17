@@ -5,7 +5,7 @@ const multerConfig = require('./config/multerConfig');
 app.use(multerConfig.upload.single('imagemPerfil'));
 
 
-const rotaIndex = require('./app/routes/Index');
+const rotaIndex = require('./app/routes/index');
 rotaIndex(app, pool);
 
 const rotaLogin = require('./app/routes/login');
