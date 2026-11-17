@@ -1,3 +1,4 @@
+require('dotenv').config();
 const app = require('./config/server');
 const pool = require('./config/db');  // Importando corretamente o db.js de config
 const multerConfig = require('./config/multerConfig');

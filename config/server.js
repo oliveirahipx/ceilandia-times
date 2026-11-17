@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-  secret: 'seu-segredo-aqui',
+  secret: process.env.SESSION_SECRET || 'dev-only-secret',
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false }
